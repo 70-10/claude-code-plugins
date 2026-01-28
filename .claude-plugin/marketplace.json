@@ -19,6 +19,17 @@
       },
       "keywords": ["decision-record", "documentation", "adr"],
       "category": "productivity"
+    },
+    {
+      "name": "elaborate",
+      "source": "./plugins/elaborate",
+      "description": "Elaborate on specifications through detailed, structured interviews",
+      "version": "1.0.0",
+      "author": {
+        "name": "70-10"
+      },
+      "keywords": ["specification", "interview", "requirements", "elaboration"],
+      "category": "productivity"
     }
   ]
 }

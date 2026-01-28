@@ -1,0 +1,10 @@
+{
+  "name": "elaborate",
+  "version": "1.0.0",
+  "description": "Elaborate on specifications through detailed, structured interviews",
+  "author": {
+    "name": "70-10"
+  },
+  "license": "MIT",
+  "keywords": ["specification", "interview", "requirements", "elaboration"]
+}

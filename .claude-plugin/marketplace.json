@@ -1,0 +1,24 @@
+{
+  "name": "70-10-plugins",
+  "owner": {
+    "name": "70-10"
+  },
+  "metadata": {
+    "description": "70-10's Claude Code plugins",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "dr",
+      "source": "./plugins/dr",
+      "description": "Auto-generate Decision Records (DR) from conversation and save as Markdown files",
+      "version": "1.0.0",
+      "author": {
+        "name": "70-10"
+      },
+      "keywords": ["decision-record", "documentation", "adr"],
+      "category": "productivity"
+    }
+  ]
+}

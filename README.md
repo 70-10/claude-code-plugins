@@ -57,6 +57,11 @@ Helps you elaborate on specifications through detailed, structured interviews.
 - `description` - Create a new spec file from text requirements
 - No arguments - Interactively decide where to save and what to write
 
+#### Features
+
+- **Gap Analysis**: When a file path is provided, the tool first evaluates the existing content — identifying well-defined areas and ambiguous/missing areas — before starting the interview. This ensures questions focus only on what needs clarification.
+- **Interview Quality Rules**: Questions are designed to surface implicit assumptions, reveal downstream consequences of each option, avoid superficial inquiries, and flag contradictions.
+
 #### Explicit Invocation
 
 ```

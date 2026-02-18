@@ -14,6 +14,43 @@ When invoked without arguments:
 
 ---
 
-Interview me in detail using the AskUserQuestionTool (typically 1-4 questions per round with clear tradeoffs for each option) about literally anything: technical implementation, UI & UX, concerns, edge cases, etc. Make sure the questions are not obvious and each option clearly explains its tradeoffs.
+## Gap Analysis for Existing Files
 
-Be very in-depth and continue interviewing me continually until it's complete, then write the spec to the file.
+When a file path is provided, do NOT start interviewing immediately after reading. First evaluate the content and present the following as conversational text:
+
+- **Well-defined areas**: Briefly list items that need no further clarification
+- **Ambiguous or missing areas**: Items that are insufficiently defined, contradictory, or absent. Explain what is missing in one line for each
+
+After presenting, focus the interview on the ambiguous or missing areas. Do not re-ask about well-defined areas (only address them if the user wants to revise).
+
+---
+
+## Interview Quality Rules
+
+### Principles for Question Design
+
+1. **Prioritize questions that surface implicit assumptions**
+   - Challenge what the speaker unconsciously takes for granted
+   - Bring unspoken expectations, constraints, and dependencies to light
+
+2. **Show how each option affects downstream decisions**
+   - Add context like "choosing this means you'll need to decide X later" or "this narrows down options for Y"
+   - Go beyond simple pros/cons — reveal the chain of consequences
+
+3. **Avoid superficial or obvious questions**
+   - Do not ask about things that can be inferred from information already provided
+   - Defer trivial details and prioritize structural decisions first
+
+4. **Flag contradictions and unexplored combinations**
+   - When answers contradict each other, raise it immediately
+   - Present gaps like "achieving both A and B requires C, but C hasn't been decided yet"
+
+### Question Format
+
+- 1–4 questions per round (using AskUserQuestion)
+- Include tradeoff explanations for each option
+- Keep options representative — users can always provide custom input via "Other"
+
+---
+
+Be very in-depth and continue interviewing continually until it's complete, then write the spec to the file.

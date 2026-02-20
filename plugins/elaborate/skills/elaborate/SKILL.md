@@ -2,7 +2,7 @@
 name: elaborate
 description: Elaborate on specifications through detailed, structured interviews
 allowed-tools: AskUserQuestion, Write, Read
-argument-hint: [@path/to/spec.md] | [description] | [leave empty]
+argument-hint: <@path/to/spec.md or description>
 ---
 
 When invoked with arguments:

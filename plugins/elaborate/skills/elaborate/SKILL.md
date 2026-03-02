@@ -1,8 +1,15 @@
 ---
 name: elaborate
 description: Elaborate on tasks through detailed, structured interviews
-allowed-tools: AskUserQuestion
+allowed-tools: AskUserQuestion, EnterPlanMode, Write
 argument-hint: <task description>
+---
+
+## Initialization
+
+1. Call EnterPlanMode immediately
+2. IMPORTANT: Ignore the default plan mode 5-phase workflow. This skill uses its own interview workflow described below.
+
 ---
 
 When invoked with arguments:
@@ -45,4 +52,5 @@ When invoked without arguments:
 
 Be very in-depth and continue interviewing continually until it's complete, then summarize the elaborated task details.
 
-After the summary, suggest the user switch to plan mode (Shift+Tab) to proceed with implementation planning. Do NOT call ExitPlanMode or attempt to transition into planning yourself.
+1. Write the elaborated task specification to the plan file (the file path is provided by the system in plan mode). Use a structured format with clear sections (e.g., Goal, Requirements, Constraints, Decisions Made, Open Questions).
+2. The skill's job ends here. Plan mode continues — the user will review the plan and decide how to proceed.

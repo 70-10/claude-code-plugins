@@ -1,22 +1,16 @@
 ---
 name: elaborate
 description: Elaborate on tasks through detailed, structured interviews
-allowed-tools: AskUserQuestion, EnterPlanMode, Write
+allowed-tools: AskUserQuestion
 argument-hint: <task description>
----
-
-## Initialization
-
-1. Call EnterPlanMode immediately
-2. IMPORTANT: Ignore the default plan mode 5-phase workflow. This skill uses its own interview workflow described below.
-
 ---
 
 When invoked with arguments:
 - Treat the argument as a task description and use it as the subject of the interview
 
 When invoked without arguments:
-- Ask the user what task they want to elaborate on using AskUserQuestion, then proceed with the interview
+- Infer the topic from the preceding conversation context
+- Only ask the user using AskUserQuestion if the topic cannot be reasonably inferred
 
 ---
 
@@ -50,7 +44,10 @@ When invoked without arguments:
 
 ## Completion
 
-Be very in-depth and continue interviewing continually until it's complete, then summarize the elaborated task details.
+Be very in-depth and continue interviewing continually until it's complete, then present a structured summary in chat covering:
 
-1. Write the elaborated task specification to the plan file (the file path is provided by the system in plan mode). Use a structured format with clear sections (e.g., Goal, Requirements, Constraints, Decisions Made, Open Questions).
-2. The skill's job ends here. Plan mode continues — the user will review the plan and decide how to proceed.
+- **Goal**: What the user wants to achieve
+- **Requirements**: Functional and non-functional requirements identified
+- **Constraints**: Limitations, technical constraints, and boundaries
+- **Decisions Made**: Key decisions reached during the interview
+- **Open Questions**: Remaining uncertainties or deferred decisions

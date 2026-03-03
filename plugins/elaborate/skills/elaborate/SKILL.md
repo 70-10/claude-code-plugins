@@ -1,16 +1,27 @@
 ---
 name: elaborate
-description: Elaborate on tasks through detailed, structured interviews
-allowed-tools: AskUserQuestion
-argument-hint: <task description>
+description: Elaborate on specifications through detailed, structured interviews
+allowed-tools: AskUserQuestion, Write, Read
+argument-hint: <@path/to/spec.md or description>
 ---
 
 When invoked with arguments:
-- Treat the argument as a task description and use it as the subject of the interview
+- If the argument is a file path (contains `.md` or path separators), read that file and use its content as the base for the interview, then write the refined spec back to the same file
+- If the argument is plain text (description), use that as the initial requirement and create a new spec file with an appropriate name (e.g., `projects/spec-<summary>.md`)
 
 When invoked without arguments:
-- Infer the topic from the preceding conversation context
-- Only ask the user using AskUserQuestion if the topic cannot be reasonably inferred
+- First ask what the spec should be about and where to save it, then proceed with the detailed interview
+
+---
+
+## Gap Analysis for Existing Files
+
+When a file path is provided, do NOT start interviewing immediately after reading. First evaluate the content and present the following as conversational text:
+
+- **Well-defined areas**: Briefly list items that need no further clarification
+- **Ambiguous or missing areas**: Items that are insufficiently defined, contradictory, or absent. Explain what is missing in one line for each
+
+After presenting, focus the interview on the ambiguous or missing areas. Do not re-ask about well-defined areas (only address them if the user wants to revise).
 
 ---
 
@@ -42,12 +53,4 @@ When invoked without arguments:
 
 ---
 
-## Completion
-
-Be very in-depth and continue interviewing continually until it's complete, then present a structured summary in chat covering:
-
-- **Goal**: What the user wants to achieve
-- **Requirements**: Functional and non-functional requirements identified
-- **Constraints**: Limitations, technical constraints, and boundaries
-- **Decisions Made**: Key decisions reached during the interview
-- **Open Questions**: Remaining uncertainties or deferred decisions
+Be very in-depth and continue interviewing continually until it's complete, then write the spec to the file.

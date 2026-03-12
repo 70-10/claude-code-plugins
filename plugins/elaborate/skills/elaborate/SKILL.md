@@ -45,6 +45,25 @@ After presenting, focus the interview on the ambiguous or missing areas. Do not 
    - When answers contradict each other, raise it immediately
    - Present gaps like "achieving both A and B requires C, but C hasn't been decided yet"
 
+### Question Order
+
+Interview in three phases. Move to the next phase only when the current phase is sufficiently covered.
+
+1. **Why** — Purpose and motivation
+   - Why is this needed? What problem does it solve?
+   - What happens if this is not built?
+   - Who benefits and how?
+
+2. **What** — Scope and requirements
+   - What exactly should be achieved?
+   - What is in scope and out of scope?
+   - What are the success criteria?
+
+3. **How** — Approach and implementation
+   - How should it be built?
+   - What are the technical constraints and tradeoffs?
+   - What are the dependencies?
+
 ### Question Format
 
 - 1–4 questions per round (using AskUserQuestion)

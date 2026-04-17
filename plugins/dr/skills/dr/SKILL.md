@@ -4,6 +4,8 @@ description: |
   Automatically generate a Decision Record (DR) from conversation content and save it as a Markdown file.
   Trigger phrases: "Record this decision", "Create a DR", "Generate Decision Record", "Document this decision"
 allowed-tools: AskUserQuestion, Glob, Read, Write
+model: sonnet
+effort: medium
 ---
 
 A skill that automatically generates a Decision Record (DR) from conversation content and saves it as a Markdown file.

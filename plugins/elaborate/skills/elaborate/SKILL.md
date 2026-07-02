@@ -3,18 +3,18 @@ name: elaborate
 description: |
   Elaborate on specifications through detailed, structured interviews that surface implicit assumptions, contradictions, and downstream consequences.
   Use whenever the user wants to flesh out a spec, detail requirements, clarify ambiguity, deepen a design doc, or refine a feature description — even if they don't explicitly say "elaborate".
-allowed-tools: AskUserQuestion, Write, Read
+allowed-tools: AskUserQuestion, Read
 argument-hint: <@path/to/spec.md or description>
 model: opus
 effort: high
 ---
 
 When invoked with arguments:
-- If the argument is a file path (contains `.md` or path separators), read that file and use its content as the base for the interview, then write the refined spec back to the same file
-- If the argument is plain text (description), use that as the initial requirement and create a new spec file with an appropriate name (e.g., `projects/spec-<summary>.md`)
+- If the argument is a file path (contains `.md` or path separators), read that file and use its content as the base for the interview
+- If the argument is plain text (description), use that as the initial requirement for the interview
 
 When invoked without arguments:
-- First ask what the spec should be about and where to save it, then proceed with the detailed interview
+- First ask what should be clarified, then proceed with the detailed interview
 
 ---
 
@@ -76,4 +76,4 @@ Interview in three phases. Move to the next phase only when the current phase is
 
 ---
 
-Be very in-depth and continue interviewing continually until it's complete, then write the spec to the file.
+Be very in-depth and continue interviewing continually until it's complete. The goal is the interview itself — exhausting every ambiguity, assumption, and contradiction — not producing a document.

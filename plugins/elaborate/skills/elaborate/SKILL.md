@@ -5,8 +5,6 @@ description: |
   Use whenever the user wants to flesh out a spec, detail requirements, clarify ambiguity, deepen a design doc, or refine a feature description — even if they don't explicitly say "elaborate".
 allowed-tools: AskUserQuestion, Read
 argument-hint: <@path/to/spec.md or description>
-model: opus
-effort: high
 ---
 
 When invoked with arguments:

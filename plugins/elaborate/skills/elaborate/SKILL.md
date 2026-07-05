@@ -1,79 +1,21 @@
 ---
 name: elaborate
-description: |
-  Elaborate on specifications through detailed, structured interviews that surface implicit assumptions, contradictions, and downstream consequences.
-  Use whenever the user wants to flesh out a spec, detail requirements, clarify ambiguity, deepen a design doc, or refine a feature description — even if they don't explicitly say "elaborate".
-allowed-tools: AskUserQuestion, Write, Read
-argument-hint: <@path/to/spec.md or description>
-model: opus
-effort: high
+description: Use to clarify concepts, requirements, and conceptual designs through dialogue before deciding how to realize them.
+argument-hint: <concept, requirements, or conceptual design>
 ---
 
-When invoked with arguments:
-- If the argument is a file path (contains `.md` or path separators), read that file and use its content as the base for the interview, then write the refined spec back to the same file
-- If the argument is plain text (description), use that as the initial requirement and create a new spec file with an appropriate name (e.g., `projects/spec-<summary>.md`)
+Clarify the purpose, desired result, scope, success criteria, and important rules or constraints of the subject through dialogue. Produce a self-contained synthesis that an agent with no conversation history can use to begin the next stage.
 
-When invoked without arguments:
-- First ask what the spec should be about and where to save it, then proceed with the detailed interview
+If the subject is not identifiable, ask once what should be clarified. If it remains unclear, state what information is missing and stop. If the provided information is already sufficient, skip the interview and present the synthesis.
 
----
+Use available materials and the codebase to establish facts before asking the user. Ask only about unresolved intent or judgment, and do not repeat questions already answered. Ask one question at a time and wait for the answer. For questions requiring a decision, provide a recommended answer with a brief reason and explain material trade-offs when they exist.
 
-## Gap Analysis for Existing Files
+Prioritize why the subject is needed and what result it must produce. There is no fixed question order, but resolve decisions that constrain later decisions before moving to dependent details. Surface implicit assumptions, contradictions, and important consequences for requirements, user experience, business rules, or conceptual design. Do not fill important gaps with assumptions, and resolve contradictions before relying on them.
 
-When a file path is provided, do NOT start interviewing immediately after reading. First evaluate the content and present the following as conversational text:
+Stop when the purpose, desired result and scope, success criteria, and important rules or constraints can be understood consistently without the conversation history. Success criteria must make achievement observable or judgeable from the relevant user, business, or product perspective. An item may remain undecided when its boundary and impact are understood and it does not prevent the next stage.
 
-- **Well-defined areas**: Briefly list items that need no further clarification
-- **Ambiguous or missing areas**: Items that are insufficiently defined, contradictory, or absent. Explain what is missing in one line for each
+Present the clarified content concisely while preserving the context required for handoff. Include important premises, scope exclusions, unresolved matters, and decision reasons when they affect understanding. Preserve rejected alternatives and their reasons only when losing them could cause repeated or incorrect decisions. Distinguish confirmed facts, agreed decisions, and tentative assumptions where confusing them would matter. Cite the source of important facts established through investigation. Indicate whether unresolved matters block the next stage or can remain deferred, and identify the next clarification needed when useful.
 
-After presenting, focus the interview on the ambiguous or missing areas. Do not re-ask about well-defined areas (only address them if the user wants to revise).
+If required information cannot be obtained, present what has been clarified and what remains missing, clearly distinguished, then stop.
 
----
-
-## Interview Quality Rules
-
-### Principles for Question Design
-
-1. **Prioritize questions that surface implicit assumptions**
-   - Challenge what the speaker unconsciously takes for granted
-   - Bring unspoken expectations, constraints, and dependencies to light
-
-2. **Show how each option affects downstream decisions**
-   - Add context like "choosing this means you'll need to decide X later" or "this narrows down options for Y"
-   - Go beyond simple pros/cons — reveal the chain of consequences
-
-3. **Avoid superficial or obvious questions**
-   - Do not ask about things that can be inferred from information already provided
-   - Defer trivial details and prioritize structural decisions first
-
-4. **Flag contradictions and unexplored combinations**
-   - When answers contradict each other, raise it immediately
-   - Present gaps like "achieving both A and B requires C, but C hasn't been decided yet"
-
-### Question Order
-
-Interview in three phases. Move to the next phase only when the current phase is sufficiently covered.
-
-1. **Why** — Purpose and motivation
-   - Why is this needed? What problem does it solve?
-   - What happens if this is not built?
-   - Who benefits and how?
-
-2. **What** — Scope and requirements
-   - What exactly should be achieved?
-   - What is in scope and out of scope?
-   - What are the success criteria?
-
-3. **How** — Approach and implementation
-   - How should it be built?
-   - What are the technical constraints and tradeoffs?
-   - What are the dependencies?
-
-### Question Format
-
-- 1–4 questions per round (using AskUserQuestion)
-- Include tradeoff explanations for each option
-- Keep options representative — users can always provide custom input via "Other"
-
----
-
-Be very in-depth and continue interviewing continually until it's complete, then write the spec to the file.
+This Skill ends after clarification and synthesis. It does not decide technical design, implementation methods, verification procedures, or carry out the clarified work. If the main request is to choose a realization method or a hypothesis to test, state that it is outside this Skill and stop. If only a subsidiary issue is outside scope, leave it unresolved and continue unless it prevents meaningful clarification.

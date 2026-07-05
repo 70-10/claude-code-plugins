@@ -13,7 +13,6 @@
       "name": "dr",
       "source": "./plugins/dr",
       "description": "Auto-generate Decision Records (DR) from conversation and save as Markdown files",
-      "version": "1.0.0",
       "author": {
         "name": "70-10"
       },
@@ -24,7 +23,6 @@
       "name": "elaborate",
       "source": "./plugins/elaborate",
       "description": "Elaborate on specifications through detailed, structured interviews",
-      "version": "1.0.0",
       "author": {
         "name": "70-10"
       },

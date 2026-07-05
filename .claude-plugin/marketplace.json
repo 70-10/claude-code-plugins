@@ -20,13 +20,13 @@
       "category": "productivity"
     },
     {
-      "name": "elaborate",
-      "source": "./plugins/elaborate",
-      "description": "Elaborate on specifications through detailed, structured interviews",
+      "name": "thinking",
+      "source": "./plugins/thinking",
+      "description": "Thinking tools for hypothesis selection, requirement elaboration, and implementation briefing",
       "author": {
         "name": "70-10"
       },
-      "keywords": ["specification", "interview", "requirements", "elaboration"],
+      "keywords": ["thinking", "planning", "requirements", "hypothesis", "brief"],
       "category": "productivity"
     }
   ]

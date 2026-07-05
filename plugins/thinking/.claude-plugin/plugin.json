@@ -1,0 +1,15 @@
+{
+  "name": "thinking",
+  "description": "Thinking tools for hypothesis selection, requirement elaboration, and implementation briefing.",
+  "author": {
+    "name": "70-10"
+  },
+  "license": "MIT",
+  "keywords": [
+    "thinking",
+    "planning",
+    "requirements",
+    "hypothesis",
+    "brief"
+  ]
+}

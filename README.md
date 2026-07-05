@@ -7,7 +7,7 @@ A collection of Claude Code plugins.
 | Plugin | Description |
 |--------|-------------|
 | [dr](./plugins/dr) | Auto-generate Decision Records (DR) from conversation and save as Markdown files |
-| [elaborate](./plugins/elaborate) | Elaborate on specifications through detailed, structured interviews |
+| [thinking](./plugins/thinking) | Thinking tools for hypothesis selection, requirement elaboration, and implementation briefing |
 
 ## Installation
 
@@ -17,11 +17,11 @@ Add marketplace:
 /plugin marketplace add 70-10/claude-code-plugins
 ```
 
-Install plugin:
+Install plugins:
 
 ```bash
 /plugin install dr@70-10-plugins
-/plugin install elaborate@70-10-plugins
+/plugin install thinking@70-10-plugins
 ```
 
 ## Usage
@@ -47,27 +47,31 @@ Automatically generates a Decision Record from your conversation and saves it as
 
 Decision Records are saved to `decision-records/` directory in the current working directory.
 
-### elaborate - Specification Interview Tool
+### thinking - Thinking Tools
 
-Helps you elaborate on specifications through detailed, structured interviews.
+Groups skills for clarifying uncertain work before implementation or execution.
+
+#### Skills
+
+- `first-bet` - Identify the first hypothesis worth testing when the right answer is unclear.
+- `elaborate` - Clarify concepts, requirements, and conceptual designs through dialogue.
+- `brief` - Align requirements, completion criteria, and implementation approach before starting implementation.
 
 #### Arguments
 
-- `@path/to/spec.md` - Use an existing spec file as the base for the interview
-- `description` - Create a new spec file from text requirements
-- No arguments - Interactively decide where to save and what to write
-
-#### Features
-
-- **Gap Analysis**: When a file path is provided, the tool first evaluates the existing content — identifying well-defined areas and ambiguous/missing areas — before starting the interview. This ensures questions focus only on what needs clarification.
-- **Interview Quality Rules**: Questions are designed to surface implicit assumptions, reveal downstream consequences of each option, avoid superficial inquiries, and flag contradictions.
+- `/first-bet <situation or question>` - Explore the first hypothesis worth testing.
+- `/elaborate <concept, requirements, or conceptual design>` - Clarify purpose, scope, success criteria, and constraints.
+- `/brief <implementation task>` - Produce an approved, self-contained implementation specification.
 
 #### Explicit Invocation
 
 ```
+/first-bet
+/first-bet should we adopt this approach?
 /elaborate
-/elaborate @path/to/spec.md
 /elaborate new feature description
+/brief
+/brief implement the new plugin structure
 ```
 
 ## License

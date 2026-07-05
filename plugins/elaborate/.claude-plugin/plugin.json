@@ -1,9 +1,0 @@
-{
-  "name": "elaborate",
-  "description": "Elaborate on tasks through detailed, structured interviews",
-  "author": {
-    "name": "70-10"
-  },
-  "license": "MIT",
-  "keywords": ["interview", "requirements", "elaboration", "task"]
-}

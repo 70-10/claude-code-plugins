@@ -7,7 +7,7 @@ A collection of Claude Code plugins.
 | Plugin | Description |
 |--------|-------------|
 | [dr](./plugins/dr) | Auto-generate Decision Records (DR) from conversation and save as Markdown files |
-| [thinking](./plugins/thinking) | Thinking tools for hypothesis selection, requirement elaboration, and implementation briefing |
+| [thinking](./plugins/thinking) | Thinking tools for subject alignment, hypothesis selection, requirement elaboration, and implementation briefing |
 
 ## Installation
 
@@ -53,12 +53,14 @@ Groups skills for clarifying uncertain work before implementation or execution.
 
 #### Skills
 
+- `align` - Identify what to work on when it's unclear whether to start with elaborate, first-bet, or brief.
 - `first-bet` - Identify the first hypothesis worth testing when the right answer is unclear.
 - `elaborate` - Clarify concepts, requirements, and conceptual designs through dialogue.
 - `brief` - Align requirements, completion criteria, and implementation approach before starting implementation.
 
 #### Arguments
 
+- `/align <what is currently known>` - Identify the subject and hand off to the fitting Skill.
 - `/first-bet <situation or question>` - Explore the first hypothesis worth testing.
 - `/elaborate <concept, requirements, or conceptual design>` - Clarify purpose, scope, success criteria, and constraints.
 - `/brief <implementation task>` - Produce an approved, self-contained implementation specification.
@@ -66,6 +68,8 @@ Groups skills for clarifying uncertain work before implementation or execution.
 #### Explicit Invocation
 
 ```
+/align
+/align not sure if this needs elaborate or brief
 /first-bet
 /first-bet should we adopt this approach?
 /elaborate

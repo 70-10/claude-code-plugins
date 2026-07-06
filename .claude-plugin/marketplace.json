@@ -22,11 +22,11 @@
     {
       "name": "thinking",
       "source": "./plugins/thinking",
-      "description": "Thinking tools for hypothesis selection, requirement elaboration, and implementation briefing",
+      "description": "Thinking tools for subject alignment, hypothesis selection, requirement elaboration, and implementation briefing",
       "author": {
         "name": "70-10"
       },
-      "keywords": ["thinking", "planning", "requirements", "hypothesis", "brief"],
+      "keywords": ["thinking", "planning", "requirements", "hypothesis", "brief", "alignment"],
       "category": "productivity"
     }
   ]

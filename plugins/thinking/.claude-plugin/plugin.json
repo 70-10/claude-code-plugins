@@ -1,6 +1,6 @@
 {
   "name": "thinking",
-  "description": "Thinking tools for hypothesis selection, requirement elaboration, and implementation briefing.",
+  "description": "Thinking tools for subject alignment, hypothesis selection, requirement elaboration, and implementation briefing.",
   "author": {
     "name": "70-10"
   },
@@ -10,6 +10,7 @@
     "planning",
     "requirements",
     "hypothesis",
-    "brief"
+    "brief",
+    "alignment"
   ]
 }

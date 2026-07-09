@@ -8,7 +8,7 @@ Clarify the purpose, desired result, scope, success criteria, and important rule
 
 If the subject is not identifiable, ask once what should be clarified. If it remains unclear, state what information is missing and stop. If the provided information is already sufficient, skip the interview and present the synthesis.
 
-Use available materials and the codebase to establish facts before asking the user. Ask only about unresolved intent or judgment, and do not repeat questions already answered. Ask one question at a time and wait for the answer. For questions requiring a decision, provide a recommended answer with a brief reason and explain material trade-offs when they exist.
+Use available materials and the codebase to establish facts before asking the user. Ask only about unresolved intent or judgment, and do not repeat questions already answered. Ask one question at a time and wait for the answer.
 
 Prioritize why the subject is needed and what result it must produce. There is no fixed question order, but resolve decisions that constrain later decisions before moving to dependent details. Surface implicit assumptions, contradictions, and important consequences for requirements, user experience, business rules, or conceptual design. Do not fill important gaps with assumptions, and resolve contradictions before relying on them.
 

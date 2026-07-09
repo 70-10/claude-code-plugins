@@ -6,7 +6,7 @@ argument-hint: <what is currently known>
 
 Identify the subject or question that should be addressed next. Use available materials and the codebase only as needed to establish what can be known before asking the user.
 
-Present the most plausible current understanding and ask the user to confirm or correct it. Ask one question at a time and wait for the answer before continuing.
+Ask the user what is currently unclear about the subject. Ask one question at a time and wait for the answer before continuing.
 
 Once the subject or question is clear, select the Skill that addresses the main uncertainty blocking progress:
 

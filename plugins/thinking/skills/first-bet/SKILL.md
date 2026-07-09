@@ -6,7 +6,7 @@ argument-hint: <situation or question>
 
 Interview the user to build a shared understanding and identify the first hypothesis worth testing.
 
-Ask questions one at a time, waiting for feedback before continuing. For each question, provide your recommended answer.
+Ask questions one at a time, waiting for feedback before continuing.
 
 Focus on the hypothesis whose outcome would most change what happens next. Make it specific enough to be supported or rejected by the test.
 

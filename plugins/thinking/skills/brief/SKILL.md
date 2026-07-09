@@ -8,7 +8,7 @@ argument-hint: <implementation task>
 
 Turn an implementation task into an approved, self-contained implementation specification by inspecting the codebase and aligning understanding with the user. The result must contain enough context for another AI agent, with no access to the conversation history, to implement and verify the task without additional clarification.
 
-Ask one question at a time and wait for the answer before continuing. For each question, provide a recommended answer and briefly explain the reasoning. Do not ask the user for information that can be determined from the codebase. If the user's description conflicts with the code or existing behavior, surface the conflict and resolve it with the user.
+Ask one question at a time and wait for the answer before continuing. Do not ask the user for information that can be determined from the codebase. If the user's description conflicts with the code or existing behavior, surface the conflict and resolve it with the user.
 
 The implementation specification must include:
 

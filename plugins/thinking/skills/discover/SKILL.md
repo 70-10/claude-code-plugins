@@ -1,0 +1,19 @@
+---
+name: discover
+description: Use when a question or problem is identified but the knowledge, context, and important unknowns needed to understand it are not. Explore available information, surface blind spots, and form an evidence-based understanding the user can act on.
+argument-hint: <identified question or problem>
+---
+
+Starting from an identified question or problem, discover and connect the knowledge, context, and evidence needed to understand the subject, and form an understanding that lets a user unfamiliar with the subject judge and act on their own. Assume the user may not know the right search terms, where materials are, or even what they need to know. If the question or problem itself is not identified, state what is missing and stop.
+
+Establish what the user currently knows, assumes, and already recognizes as unknown. Investigate available information autonomously — materials, code, data, history, whatever the environment provides — before asking the user. Ask only for what the user alone can provide, one question at a time, waiting for each answer. When needed knowledge is not at hand, trace available clues toward where it may exist; if the trail runs out, state what was checked, what is missing, and how the gap affects understanding.
+
+Do not stop at the questions the user has raised. Critically examine the current understanding, assumptions, scope, and sources to surface important unknowns and blind spots not yet recognized: implicit premises, missing stakeholders or cases, exceptions and boundaries, effects on other work or systems, gaps between current behavior and intended specification, constraints that may no longer hold, or flaws in the premise of the question itself. Do not enumerate possibilities without limit; prioritize the unknowns that most affect the next judgment or action, and reduce them by whatever method fits — investigation, dialogue, or concrete examples.
+
+Do not accept load-bearing premises unconditionally, whether they come from the user or from materials; consider whether they are unverified, biased, or wrong when they would sway the conclusion. Distinguish confirmed facts from agreed decisions, hypotheses, inferences, and unverified assumptions — including whether user-provided information is direct observation, judgment, or hearsay — so the reader cannot mistake one for another. Give load-bearing facts a source that can be re-verified; do not treat information without evidence as confirmed fact. When important sources conflict, surface the conflict rather than silently picking a winner; resolve it when the next step depends on it, and otherwise state what remains undecided and what it affects.
+
+Connect what was found into a coherent explanation of the subject rather than a list of findings. Draw the conclusions the evidence supports; where evidence is insufficient or multiple interpretations remain, do not force a single conclusion — state the uncertainty and what additional information would resolve it.
+
+Stop when the unknowns that matter for the next step are sufficiently reduced, the remaining unknowns, uncertainties, and risks are explicit, and the user can understand the subject and decide or act on their own — not when every unknown is resolved. If required information cannot be obtained, present what was confirmed, what is missing, and how that affects understanding, then stop. Present a self-contained synthesis that a person or agent without the conversation history can use to take over: the question, key background, confirmed facts with their evidence, the understanding formed, important premises, discovered blind spots, remaining unknowns and their impact, and considerations for the next decision or action.
+
+Do not decide what to work on, choose which hypothesis to test first, produce an implementation specification, carry out the solution, change production code or environments, or document the whole domain exhaustively.

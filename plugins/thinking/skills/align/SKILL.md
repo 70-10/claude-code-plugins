@@ -1,6 +1,6 @@
 ---
 name: align
-description: Use when what to work on or whether to start with elaborate, first-bet, or brief is unclear. Align on the subject or question and hand off when one fits.
+description: Use when what to work on or whether to start with elaborate, first-bet, brief, or discover is unclear. Align on the subject or question and hand off when one fits.
 argument-hint: <what is currently known>
 ---
 
@@ -13,6 +13,7 @@ Once the subject or question is clear, select the Skill that addresses the main 
 - `elaborate`: the subject is identifiable, but its purpose, desired result, scope, success criteria, or important constraints need clarification.
 - `first-bet`: the situation or question is identifiable, but the right answer is unclear and the first hypothesis worth testing must be chosen.
 - `brief`: the implementation task is identifiable, but its requirements, completion criteria, and implementation approach need alignment.
+- `discover`: the question or problem is identifiable, but the knowledge, context, evidence, or important unknowns needed to understand the subject and proceed are unclear.
 
 If the subject and matching Skill are already clear, skip alignment questions. If multiple Skills fit, choose the one that most directly addresses the main unresolved uncertainty.
 

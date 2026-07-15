@@ -20,6 +20,16 @@
       "category": "productivity"
     },
     {
+      "name": "dev",
+      "source": "./plugins/dev",
+      "description": "Gated development flow with deterministic guards: adaptive intake, decompose, per-unit implement loop, verify, and independent review",
+      "author": {
+        "name": "70-10"
+      },
+      "keywords": ["development", "workflow", "gates", "review", "guardrails"],
+      "category": "productivity"
+    },
+    {
       "name": "thinking",
       "source": "./plugins/thinking",
       "description": "Thinking tools for subject alignment, hypothesis selection, requirement elaboration, and implementation briefing",

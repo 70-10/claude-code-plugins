@@ -7,20 +7,17 @@ A collection of Claude Code plugins.
 | Plugin | Description |
 |--------|-------------|
 | [dr](./plugins/dr) | Auto-generate Decision Records (DR) from conversation and save as Markdown files |
+| [dev](./plugins/dev) | Run an implementation task in reviewable steps with explicit approval before each step advances |
 | [thinking](./plugins/thinking) | Thinking tools for subject alignment, hypothesis selection, requirement elaboration, and implementation briefing |
 
 ## Installation
 
-Add marketplace:
+Run the following commands in Claude Code to add this marketplace and install the plugins you want:
 
-```bash
+```text
 /plugin marketplace add 70-10/claude-code-plugins
-```
-
-Install plugins:
-
-```bash
 /plugin install dr@70-10-plugins
+/plugin install dev@70-10-plugins
 /plugin install thinking@70-10-plugins
 ```
 
@@ -46,6 +43,21 @@ Automatically generates a Decision Record from your conversation and saves it as
 #### Output
 
 Decision Records are saved to `decision-records/` directory in the current working directory.
+
+### dev - Gated Development Flow
+
+Guides an implementation task through planning, small implementation units, testing, and an
+independent review. Claude Code shows the result of each step and waits for your explicit approval
+before continuing.
+
+Install the plugin, open Claude Code in a Git repository with at least one commit, and run:
+
+```
+/dev:flow <what you want to implement>
+```
+
+See the [dev plugin guide](./plugins/dev/README.md) for a first-run tutorial, example conversation,
+and instructions for resuming or requesting changes.
 
 ### thinking - Thinking Tools
 

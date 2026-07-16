@@ -1,0 +1,5 @@
+{
+  "name": "dev",
+  "description": "Gated development flow: adaptive intake, decompose, per-unit implement loop, verify, independent review — with deterministic guards (audit chain, write boundaries, presentation attestation) enforced by a bookkeeper and hooks",
+  "version": "0.1.0"
+}

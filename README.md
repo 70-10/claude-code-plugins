@@ -18,30 +18,30 @@ Reusable [Agent Skills](https://agentskills.io/) for decision documentation and 
 List the available skills without installing them:
 
 ```sh
-npx skills add 70-10/claude-code-plugins --list
+npx skills add 70-10/skills --list
 ```
 
 Install selected skills interactively, or name them explicitly:
 
 ```sh
-npx skills add 70-10/claude-code-plugins
-npx skills add 70-10/claude-code-plugins --skill adr --skill brief
+npx skills add 70-10/skills
+npx skills add 70-10/skills --skill adr --skill brief
 ```
 
 Install every published skill to every detected agent:
 
 ```sh
-npx skills add 70-10/claude-code-plugins --all
+npx skills add 70-10/skills --all
 ```
 
 Target a specific agent for a project-level installation:
 
 ```sh
 # Claude Code
-npx skills add 70-10/claude-code-plugins --skill '*' --agent claude-code
+npx skills add 70-10/skills --skill '*' --agent claude-code
 
 # Codex
-npx skills add 70-10/claude-code-plugins --skill '*' --agent codex
+npx skills add 70-10/skills --skill '*' --agent codex
 ```
 
 Project-level installation is the default. Add `--global` only when you intentionally want to install into your user-level skill directories.

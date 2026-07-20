@@ -1,7 +1,6 @@
 ---
 name: discover
 description: Use when a question or problem is identified but the knowledge, context, and important unknowns needed to understand it are not. Explore available information, surface blind spots, and form an evidence-based understanding the user can act on.
-argument-hint: <identified question or problem>
 ---
 
 Starting from an identified question or problem, discover and connect the knowledge, context, and evidence needed to understand the subject, and form an understanding that lets a user unfamiliar with the subject judge and act on their own. Assume the user may not know the right search terms, where materials are, or even what they need to know. If the question or problem itself is not identified, state what is missing and stop.

@@ -1,7 +1,6 @@
 ---
 name: first-bet
 description: Help the user identify the first hypothesis worth testing when the right answer is unclear.
-argument-hint: <situation or question>
 ---
 
 Interview the user to build a shared understanding and identify the first hypothesis worth testing.

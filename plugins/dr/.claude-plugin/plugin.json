@@ -1,9 +1,0 @@
-{
-  "name": "dr",
-  "description": "Auto-generate Decision Records (DR) from conversation and save as Markdown files",
-  "author": {
-    "name": "70-10"
-  },
-  "license": "MIT",
-  "keywords": ["decision-record", "documentation", "adr"]
-}

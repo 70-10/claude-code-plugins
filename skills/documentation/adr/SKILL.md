@@ -1,43 +1,21 @@
 ---
-name: dr
-description: |
-  Automatically generate a Decision Record (DR) from conversation content and save it as a Markdown file.
-  Trigger phrases: "Record this decision", "Create a DR", "Generate Decision Record", "Document this decision"
-allowed-tools: AskUserQuestion, Glob, Read, Write
-model: sonnet
-effort: medium
+name: adr
+description: Generate an Architecture Decision Record (ADR) or a general Decision Record from conversation content and save it as a Markdown file. Use when a user asks to record, create, generate, or document a decision.
 ---
 
-A skill that automatically generates a Decision Record (DR) from conversation content and saves it as a Markdown file.
+Generate a Decision Record from conversation content and save it as a Markdown file.
 
 ## Purpose
 
-Record decisions (not limited to Architecture) as documentation.
+Record architecture decisions and general project or software-development decisions as documentation.
 
 ## Save Location
 
-`decision-records/` directory in the current working directory
-
-## Invocation
-
-### Explicit Invocation
-
-```
-/dr
-```
-
-### Trigger Phrases
-
-The following phrases also activate this skill:
-
-- "Record this decision"
-- "Create a DR"
-- "Generate Decision Record"
-- "Document this decision"
+Save records in the `decision-records/` directory in the current working directory.
 
 ## Processing Flow
 
-> **Note**: Claude adapts all questions and interactions to the user's language at runtime.
+Adapt all questions and interactions to the user's language.
 
 ### 1. Conversation Analysis
 
@@ -60,11 +38,11 @@ Determine Status based on the conversation flow:
 
 ### 3. Draft Generation
 
-Generate a DR draft from the extracted information.
+Generate a Decision Record draft from the extracted information.
 
-### 4. Confirmation via AskUserQuestion
+### 4. User Confirmation
 
-Confirm the following items:
+Ask the user to confirm the following items:
 
 1. **Title**: An active voice sentence that concisely describes the decision
 2. **Status**: Proposed / Accepted / Deprecated / Superseded
@@ -72,19 +50,19 @@ Confirm the following items:
 4. **Decision**: The decision content and rationale
 5. **Consequences**: Results brought about by the decision
 
-If corrections are needed, reflect them and re-confirm.
+If corrections are needed, reflect them and ask for confirmation again.
 
-### 5. For Deprecated/Superseded Status
+### 5. Deprecated or Superseded Status
 
-If the Status is Deprecated or Superseded, confirm the replacement DR.
+If the Status is Deprecated or Superseded, confirm the replacement Decision Record.
 
 ### 6. File Saving
 
-After confirmation, save as a Markdown file.
+After confirmation, save the Markdown file.
 
 ## When No Decision Can Be Extracted
 
-Ask the following via AskUserQuestion:
+Ask the user:
 
 1. "What decision do you want to record?"
 2. "What options were considered?"
@@ -93,7 +71,7 @@ Ask the following via AskUserQuestion:
 
 ## Template
 
-Based on Michael Nygard's original format:
+Use this format, based on Michael Nygard's original template:
 
 ```markdown
 ---
@@ -134,20 +112,20 @@ Include both positive and negative aspects.
 |--------|-------------|------|
 | Proposed | Under proposal, not yet approved | None |
 | Accepted | Approved, ready for implementation | None |
-| Deprecated | No longer recommended, replaced by another DR | Add `Superseded by [[New DR]]` |
+| Deprecated | No longer recommended, replaced by another Decision Record | Add `Superseded by [[New DR]]` |
 | Superseded | Completely replaced | Add `Superseded by [[New DR]]` |
 
 ## File Name Format
 
-The file name follows the user's language. The format is:
+Use the user's language in the file name:
 
-```
+```text
 YYYY-MM-DD Title.md
 ```
 
 ### File Name Sanitization
 
-Remove or replace the following characters:
+Remove or replace these characters:
 
 - `/`, `\`, `:`, `*`, `?`, `"`, `<`, `>`, `|`
 
@@ -158,7 +136,7 @@ Remove or replace the following characters:
 
 ## Output Example
 
-> **Note**: Output language follows the user's language. The example below is in English for documentation purposes.
+Use the user's language for output. The example below is in English for documentation purposes.
 
 ```markdown
 ---
@@ -214,6 +192,4 @@ Alternatives considered:
 
 ## Completion Notification
 
-Output the saved file path.
-
-Example: `decision-records/2026-01-28 Adopt Next.js as Frontend Framework.md`
+Output the saved file path, for example: `decision-records/2026-01-28 Adopt Next.js as Frontend Framework.md`.

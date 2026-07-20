@@ -1,7 +1,6 @@
 ---
 name: brief
 description: Use before starting an implementation task when the requirements, completion criteria, and implementation approach need to be aligned.
-argument-hint: <implementation task>
 ---
 
 # brief

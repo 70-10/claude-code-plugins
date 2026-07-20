@@ -1,7 +1,6 @@
 ---
 name: elaborate
 description: Use to clarify concepts, requirements, and conceptual designs through dialogue before deciding how to realize them.
-argument-hint: <concept, requirements, or conceptual design>
 ---
 
 Clarify the purpose, desired result, scope, success criteria, and important rules or constraints of the subject through dialogue. Produce a self-contained synthesis that an agent with no conversation history can use to begin the next stage.
@@ -18,4 +17,4 @@ Present the clarified content concisely while preserving the context required fo
 
 If required information cannot be obtained, present what has been clarified and what remains missing, clearly distinguished, then stop.
 
-This Skill ends after clarification and synthesis. It does not decide technical design, implementation methods, verification procedures, or carry out the clarified work. If the main request is to choose a realization method or a hypothesis to test, state that it is outside this Skill and stop. If only a subsidiary issue is outside scope, leave it unresolved and continue unless it prevents meaningful clarification.
+This skill ends after clarification and synthesis. It does not decide technical design, implementation methods, verification procedures, or carry out the clarified work. If the main request is to choose a realization method or a hypothesis to test, state that it is outside this skill and stop. If only a subsidiary issue is outside scope, leave it unresolved and continue unless it prevents meaningful clarification.

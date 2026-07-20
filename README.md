@@ -50,7 +50,7 @@ Project-level installation is the default. Add `--global` only when you intentio
 
 The former Claude Code Plugin Marketplace is no longer distributed from this repository. The `dr` plugin is now the agent-independent `adr` skill; update references from `dr` to `adr` when migrating.
 
-The Claude Code-only `dev` plugin is not an Agent Skill and is not distributed by `npx skills`. Its source remains available under [`plugins/dev`](./plugins/dev) while it is prepared for archival.
+The archived Claude Code-only `dev` plugin is not an Agent Skill, is no longer maintained, and is not distributed by `npx skills`. Its source remains available for reference under [`legacy/claude-code/dev`](./legacy/claude-code/dev).
 
 ## License
 

@@ -6,7 +6,7 @@ Reusable [Agent Skills](https://agentskills.io/) for decision documentation and 
 
 | Skill | Description |
 | --- | --- |
-| `adr` | Create Architecture Decision Records and general Decision Records from a conversation |
+| `adr` | Record every identifiable decision from the current session, code, and documentation as self-contained ADRs |
 | `align` | Identify the subject to address and continue with the appropriate thinking workflow |
 | `brief` | Produce an approved, self-contained implementation specification |
 | `discover` | Build an evidence-based understanding of an identified question or problem |

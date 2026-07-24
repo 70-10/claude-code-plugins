@@ -12,6 +12,7 @@ Reusable [Agent Skills](https://agentskills.io/) for decision documentation and 
 | `discover` | Build an evidence-based understanding of an identified question or problem |
 | `elaborate` | Clarify purpose, scope, success criteria, and constraints through dialogue |
 | `first-bet` | Choose the first hypothesis worth testing when the answer is unclear |
+| `refine` | Refine a GitHub Issue into an approved, self-contained description ready for implementation |
 
 ## Installation
 
